@@ -8,16 +8,16 @@ public class ExchangeUpperLower {
     }
 
     private static String solution(String my_string) {
-        StringBuilder sb = new StringBuilder();
+        String answer = "";
         for(int i=0; i<my_string.length(); i++) {
             int charAt = my_string.charAt(i);
 
             if(charAt < 97) {
-                sb.append((char)(my_string.charAt(i) + 32));
+                answer += (char)(my_string.charAt(i) + 32);
             } else {
-                sb.append((char)(my_string.charAt(i) - 32));
+                answer += (char)(my_string.charAt(i) - 32);
             }
         }
-        return sb.toString();
+        return answer;
     }
 }
